@@ -38,17 +38,16 @@ module uart_rx#(
             frame_error     <= 0;
         end
         else begin
-            rx_valid    <= 0;
-            parity_error <= 0;
-            frame_error  <= 0;
             case(state)
                 IDLE    :   begin
                                 rx_clk_cnt <= '0;
                                 rx_bit_idx <= '0;
-                                if(rx == 0)
+                                if(rx == 0) begin
+                                    parity_error <= 0;
+                                    frame_error  <= 0;
+                                    rx_valid    <= 0;
                                     state <= START;
-                                else
-                                    state <= IDLE
+                                end
                             end
                 START   :   begin
                                 if(rx_clk_cnt == (CLK_PER_BIT / 2)) begin
@@ -65,13 +64,13 @@ module uart_rx#(
                                 if(rx_clk_cnt == (CLK_PER_BIT - 1)) begin
                                     rx_clk_cnt  <= '0;
                                     rx_data[rx_bit_idx] <= rx;
-                                    rx_bit_idx++;
                                     if(rx_bit_idx == 3'd7)begin
                                         state   <= USE_PARITY ? PARITY : STOP;
                                         rx_bit_idx  <= '0;
                                     end
                                     else
                                         state   <= DATA;
+                                    rx_bit_idx++;
                                 end
                                 else
                                     rx_clk_cnt++;
@@ -100,7 +99,7 @@ module uart_rx#(
                                 else
                                     rx_clk_cnt++;
                             end
-                                    
+            endcase                          
         end
     end
 
