@@ -9,19 +9,19 @@
 //=====================================================
 
 module uart_rx#(
-    parameter   CLK_PER_BIT = 5208,
-    parameter   USE_PARITY  = 1
+    parameter   CLK_PER_BIT = 5208
 )(
     input   logic clk,
     input   logic rst_n,
     input   logic rx,
+    input   logic parity_en,
     output  logic [7:0] rx_data,
-    output  logic rx_valid,
+    output  logic rx_valid, 
     output  logic parity_error,
     output  logic frame_error
 );
 
-    typedef enum {IDLE, START, DATA,PARITY, STOP} state_n;
+    typedef enum {IDLE, START, DATA, PARITY, STOP} state_n;
     state_n state;
 
     logic [$clog2(CLK_PER_BIT) -1 : 0] rx_clk_cnt;
@@ -42,10 +42,10 @@ module uart_rx#(
                 IDLE    :   begin
                                 rx_clk_cnt <= '0;
                                 rx_bit_idx <= '0;
+                                parity_error <= 0;
+                                frame_error  <= 0;
+                                rx_valid    <= 0;
                                 if(rx == 0) begin
-                                    parity_error <= 0;
-                                    frame_error  <= 0;
-                                    rx_valid    <= 0;
                                     state <= START;
                                 end
                             end
@@ -65,7 +65,7 @@ module uart_rx#(
                                     rx_clk_cnt  <= '0;
                                     rx_data[rx_bit_idx] <= rx;
                                     if(rx_bit_idx == 3'd7)begin
-                                        state   <= USE_PARITY ? PARITY : STOP;
+                                        state   <= parity_en ? PARITY : STOP;
                                         rx_bit_idx  <= '0;
                                     end
                                     else
