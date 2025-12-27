@@ -13,6 +13,7 @@ interface uart_interface;
     logic rst_n;
     logic tx;
     logic rx;
+    logic tx_data;
     logic rx_valid;
     logic tx_valid;
     logic frame_error;
