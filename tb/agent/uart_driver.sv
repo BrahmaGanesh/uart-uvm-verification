@@ -68,7 +68,7 @@ class uart_driver extends uvm_driver #(uart_transaction);
     forever begin
     	seq_item_port.get_next_item(tr);
             wait(vif.rst_n);
-            
+            vif.tx_data     <= tr.tx_data;
             vif.baud_rate   <= tr.baud_rate;
       		vif.tx <= 0;
             `uvm_info(get_type_name(),$sformatf("START DATA SEND tx =%0d",vif.tx),UVM_LOW)
