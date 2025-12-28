@@ -17,7 +17,7 @@ class uart_transaction extends uvm_sequence_item;
     rand bit       parity_en;
          bit       frame_error;
          bit       parity_error;
-    rand bit [12:0] baud_rate;
+    rand bit [12:0] clk_per_bit;
 
     `uvm_object_utils_begin(uart_transaction)
         `uvm_field_int(tx_data, UVM_ALL_ON)
@@ -27,7 +27,7 @@ class uart_transaction extends uvm_sequence_item;
         `uvm_field_int(parity_en, UVM_ALL_ON)
         `uvm_field_int(parity_error, UVM_ALL_ON)
         `uvm_field_int(frame_error, UVM_ALL_ON)
-        `uvm_field_int(baud_rate, UVM_ALL_ON)
+        `uvm_field_int(clk_per_bit, UVM_ALL_ON)
     `uvm_object_utils_end
 
     function new (string name = "uart_transaction");
