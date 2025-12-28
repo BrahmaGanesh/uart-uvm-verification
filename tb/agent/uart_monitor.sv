@@ -38,24 +38,28 @@ class uart_monitor extends uvm_monitor;
 
     task run_phase(uvm_phase phase);
         forever begin
+            tr = uart_transaction::type_id::create("tr");
             wait(vif.rst_n == 1'b1);
+
+            @(posedge vif.clk);
+            tr.tx_data      = vif.tx_data;
+            
             wait(vif.rx_valid);
             `uvm_info(get_type_name(),"Monitor detected rx_valid...",UVM_LOW)
 
-            wait_cycles(vif.baud_rate);
+            wait_cycles(vif.clk_per_bit);
             wait(vif.rx == 0);
             `uvm_info(get_type_name(),"Monitor START bit sampled...",UVM_LOW)
-            tr = uart_transaction::type_id::create("tr", this);
-            wait_cycles(vif.baud_rate);
+            wait_cycles(vif.clk_per_bit);
       
             for (int i = 0; i < 8; i++) begin
-                wait_cycles(vif.baud_rate);
+                wait_cycles(vif.clk_per_bit);
                 `uvm_info(get_type_name(),$sformatf("Monitor capturing data bit %0d: rx=%0b", i, vif.rx),UVM_LOW)
        		    tr.rx_data[i] = vif.rx;
             end
 
             if (vif.parity_en) begin
-                wait_cycles(vif.baud_rate);
+                wait_cycles(vif.clk_per_bit);
                 `uvm_info(get_type_name(),"Monitor PARITY bit sampled...",UVM_LOW)
                 if(vif.rx == ^tr.rx_data)
           	        tr.parity_error = 0;
@@ -67,13 +71,12 @@ class uart_monitor extends uvm_monitor;
             $sformatf("Monitor captured RX_data=0x%0h | rx_valid=%0d | parity_err=%0d | frame_err=%0d",
             tr.rx_data, tr.rx_valid, tr.parity_error, tr.frame_error),UVM_LOW)
 
-            wait_cycles(vif.baud_rate);
-            tr.tx_data      = vif.tx_data;
+            wait_cycles(vif.clk_per_bit);
             tr.parity_en    = vif.parity_en;
-            tr.rx_valid     = vif.rx_valid;
+            tr.rx_valid     = 1;
             tr.parity_error = vif.parity_error;
             tr.frame_error  = vif.frame_error;
-            tr.baud_rate    = vif.baud_rate;
+            tr.clk_per_bit    = vif.clk_per_bit;
 
             `uvm_info(get_type_name(),"Monitor transaction completed.",UVM_LOW)
 
