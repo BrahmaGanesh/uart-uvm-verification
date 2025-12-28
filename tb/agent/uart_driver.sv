@@ -55,7 +55,7 @@ class uart_driver extends uvm_driver #(uart_transaction);
     task run();
         for (int i = 0; i < 8; i++) begin
    			tx_counter = 0;
-        	while (tx_counter < tr.baud_rate) begin
+        	while (tx_counter < tr.clk_per_bit) begin
       			@(posedge vif.clk);
       			tx_counter++;
     		end
@@ -69,7 +69,7 @@ class uart_driver extends uvm_driver #(uart_transaction);
     	seq_item_port.get_next_item(tr);
             wait(vif.rst_n);
             vif.tx_data     <= tr.tx_data;
-            vif.baud_rate   <= tr.baud_rate;
+            vif.clk_per_bit   <= tr.clk_per_bit;
       		vif.tx <= 0;
             `uvm_info(get_type_name(),$sformatf("START DATA SEND tx =%0d",vif.tx),UVM_LOW)
             
@@ -78,7 +78,7 @@ class uart_driver extends uvm_driver #(uart_transaction);
             if(tr.parity_en)begin
                 vif.parity_en <= tr.parity_en;
                 tx_counter = 0;
-                while (tx_counter < tr.baud_rate) begin
+                while (tx_counter < tr.clk_per_bit) begin
       		        @(posedge vif.clk);
       		        tx_counter++;
     		    end
@@ -87,16 +87,16 @@ class uart_driver extends uvm_driver #(uart_transaction);
             end
     		
             tx_counter = 0;
-            while (tx_counter < tr.baud_rate) begin
+            while (tx_counter < tr.clk_per_bit) begin
       		    @(posedge vif.clk);
       		    tx_counter++;
     		end
     		vif.tx <= 1;
              `uvm_info(get_type_name(),$sformatf("STOP DATA SEND tx =%0d",vif.tx),UVM_LOW)
 
-            repeat(12)begin
+            repeat(13)begin
             tx_counter = 0;
-                while (tx_counter < tr.baud_rate) begin
+                while (tx_counter < tr.clk_per_bit) begin
       		        @(posedge vif.clk);
       		        tx_counter++;
     		    end
