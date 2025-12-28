@@ -13,12 +13,12 @@ interface uart_interface;
     logic rst_n;
     logic tx;
     logic rx;
-    logic tx_data;
+    logic [7:0] tx_data;
     logic rx_valid;
     logic tx_valid;
     logic frame_error;
     logic parity_error;
     logic parity_en;
-    logic [12:0] baud_rate;
+    logic [12:0] clk_per_bit;
 
 endinterface
