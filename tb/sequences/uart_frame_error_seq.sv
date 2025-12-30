@@ -2,7 +2,7 @@
 // Project     : UART_UVM_VERIFICATION
 // File        : uart_frame_error_seq.sv
 // Author      : Brahma Ganesh Katrapalli
-// Date        : 27-12-2025
+// Date        : 30-12-2025
 // Version     : 1.0
 // Description : UART UVM sequence/test with frame
 //               error injection enabled.
