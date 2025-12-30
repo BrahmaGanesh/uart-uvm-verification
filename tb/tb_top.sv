@@ -1,8 +1,8 @@
 //=====================================================
 // Project     : UART_UVM_VERIFICATION
-// File        : tb.sv
+// File        : tb_top.sv
 // Author      : Brahma Ganesh Katrapalli
-// Date        : 28-12-2025
+// Date        : 30-12-2025
 // Version     : 1.0
 // Description : Top-level UART UVM testbench.
 //               Instantiates DUT and interface,
@@ -18,15 +18,10 @@ module tb;
     import pkg::*;
     uart_interface vif();
 
-    localparam int CLK_PERIOD_NS = 120;
-    localparam int BAUD_RATE     = 115200;
-    localparam int CLK_FREQ_HZ   = 1_000_000_000 / CLK_PERIOD_NS;
-    localparam int CLK_PER_BIT   = CLK_FREQ_HZ / BAUD_RATE;
-
-
-    uart_top #(.CLK_PER_BIT(CLK_PER_BIT)) dut (
+    uart_top dut (
         .clk(vif.clk),
         .rst_n(vif.rst_n),
+        .clk_per_bit(vif.clk_per_bit),
         .tx(vif.tx),
         .rx(vif.rx),
         .parity_en(vif.parity_en),
@@ -38,12 +33,14 @@ module tb;
   
     initial begin
         vif.clk = 0;
-        forever #(CLK_PERIOD_NS/2) vif.clk = ~vif.clk;
+        forever #60 vif.clk = ~vif.clk;
     end
+
     initial begin
         $dumpfile("waveform.vcd");
         $dumpvars(0,tb);
     end
+
     initial begin
         uvm_config_db#(virtual uart_interface)::set(null,"*","vif",vif);
         run_test();
