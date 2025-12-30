@@ -2,19 +2,18 @@
 // Project     : UART_UVM_VERFICATION
 // File        : uart_rx.sv
 // Author      : Brahma Ganesh Katrapalli
-// Date        : 25-12-2025
-// Version     : 1.0
+// Date        : 30-12-2025
+// Version     : 1.1
 // Description : FSM-based UART receiver with parity and
 //               frame error detection.
 //=====================================================
 
-module uart_rx#(
-    parameter   CLK_PER_BIT = 5208
-)(
+module uart_rx(
     input   logic clk,
     input   logic rst_n,
     input   logic rx,
     input   logic parity_en,
+    input   logic [12:0] clk_per_bit,
     output  logic [7:0] rx_data,
     output  logic rx_valid, 
     output  logic parity_error,
@@ -24,7 +23,7 @@ module uart_rx#(
     typedef enum {IDLE, START, DATA, PARITY, STOP} state_n;
     state_n state;
 
-    logic [$clog2(CLK_PER_BIT) -1 : 0] rx_clk_cnt;
+    logic [12:0] rx_clk_cnt;
     logic [2:0] rx_bit_idx;
 
     always_ff @(posedge clk or negedge rst_n) begin
@@ -50,7 +49,7 @@ module uart_rx#(
                                 end
                             end
                 START   :   begin
-                                if(rx_clk_cnt == (CLK_PER_BIT / 2)) begin
+                                if(rx_clk_cnt == (clk_per_bit / 2)) begin
                                     rx_clk_cnt  <= '0;
                                     if(rx == 0)
                                         state <= DATA;
@@ -61,7 +60,7 @@ module uart_rx#(
                                     rx_clk_cnt++;
                             end
                 DATA    :   begin
-                                if(rx_clk_cnt == (CLK_PER_BIT - 1)) begin
+                                if(rx_clk_cnt == (clk_per_bit - 1)) begin
                                     rx_clk_cnt  <= '0;
                                     rx_data[rx_bit_idx] <= rx;
                                     if(rx_bit_idx == 3'd7)begin
@@ -76,7 +75,7 @@ module uart_rx#(
                                     rx_clk_cnt++;
                             end
                 PARITY  :   begin
-                                if(rx_clk_cnt == (CLK_PER_BIT - 1)) begin
+                                if(rx_clk_cnt == (clk_per_bit - 1)) begin
                                     rx_clk_cnt  <= '0;
                                     if(rx != ^rx_data)
                                         parity_error    <= 1;
@@ -87,7 +86,7 @@ module uart_rx#(
                                     rx_clk_cnt++;
                             end
                 STOP    :   begin
-                                if(rx_clk_cnt == (CLK_PER_BIT - 1))begin
+                                if(rx_clk_cnt == (clk_per_bit - 1))begin
                                     rx_clk_cnt  <= '0;
                                     if(rx == 1)begin
                                         rx_valid    <= 1;
