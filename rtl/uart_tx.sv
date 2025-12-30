@@ -2,20 +2,19 @@
 // Project     : UART_UVM_VERIFICATION
 // File        : uart_tx.sv
 // Author      : Brahma Ganesh Katrapalli
-// Date        : 27-12-2025
-// Version     : 1.0
+// Date        : 30-12-2025
+// Version     : 1.1
 // Description : FSM-based UART transmitter with optional
 //               parity generation and stop bit handling.
 //=====================================================
 
-module uart_tx #(
-    parameter   CLK_PER_BIT = 5208
-)(
+module uart_tx (
     input   logic clk,
     input   logic rst_n,
     input   logic parity_en,
-    input   logic [7:0] rx_data,
     input   logic rx_valid,
+    input   logic [7:0] rx_data,
+    input   logic [12:0] clk_per_bit,
     output  logic tx,
     output  logic tx_valid
 );
@@ -23,7 +22,7 @@ module uart_tx #(
     typedef enum {IDLE, START, DATA, PARITY, STOP} state_n;
     state_n state;
 
-    logic [$clog2(CLK_PER_BIT)-1 : 0] tx_clk_cnt;
+    logic [12:0] tx_clk_cnt;
     logic [2:0] tx_bit_idx;
     logic [7:0] tx_data;
     logic   tx_req;
@@ -56,7 +55,7 @@ module uart_tx #(
                                 end
                             end
                 START   :   begin
-                                if(tx_clk_cnt == (CLK_PER_BIT - 1)) begin
+                                if(tx_clk_cnt == (clk_per_bit - 1)) begin
                                     tx_clk_cnt <= 0;
                                     tx <= 0;
                                     state <= DATA;
@@ -65,7 +64,7 @@ module uart_tx #(
                                     tx_clk_cnt++;
                             end
                 DATA    :   begin
-                                if(tx_clk_cnt == (CLK_PER_BIT - 1)) begin
+                                if(tx_clk_cnt == (clk_per_bit - 1)) begin
                                     tx_clk_cnt <= 0;
                                     tx <= tx_data[tx_bit_idx];
                                     if(tx_bit_idx == 3'd7) begin
@@ -80,7 +79,7 @@ module uart_tx #(
                                     tx_clk_cnt++;
                             end
                 PARITY  :   begin
-                                if(tx_clk_cnt == (CLK_PER_BIT -1)) begin
+                                if(tx_clk_cnt == (clk_per_bit -1)) begin
                                     tx_clk_cnt <= 0;
                                     tx <= tx_parity;
                                     state <= STOP;
@@ -89,7 +88,7 @@ module uart_tx #(
                                     tx_clk_cnt++;
                             end
                 STOP    :   begin
-                                if(tx_clk_cnt == (CLK_PER_BIT - 1)) begin
+                                if(tx_clk_cnt == (clk_per_bit - 1)) begin
                                     tx_clk_cnt <= '0;
                                     tx <= 1;
                                     state <= IDLE;
