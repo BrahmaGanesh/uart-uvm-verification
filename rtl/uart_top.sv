@@ -12,8 +12,7 @@
 `include "uart_rx.sv"
 `include "uart_tx.sv"
 
-module uart_top #(parameter CLK_PER_BIT = 5208)
-(
+module uart_top (
     input   logic clk,
     input   logic rst_n,
     input   logic parity_en,
@@ -27,7 +26,7 @@ module uart_top #(parameter CLK_PER_BIT = 5208)
 );
     logic [7:0] rx_data;
 
-    uart_rx #(.CLK_PER_BIT(CLK_PER_BIT)) DUT1(
+    uart_rx DUT1(
         .clk(clk),
         .rst_n(rst_n),
         .clk_per_bit(clk_per_bit),
@@ -38,7 +37,7 @@ module uart_top #(parameter CLK_PER_BIT = 5208)
         .parity_error(parity_error),
         .frame_error(frame_error)
     );
-    uart_tx #(.CLK_PER_BIT(CLK_PER_BIT)) DUT2(
+    uart_tx DUT2(
         .clk(clk),
         .rst_n(rst_n),
         .clk_per_bit(clk_per_bit),
