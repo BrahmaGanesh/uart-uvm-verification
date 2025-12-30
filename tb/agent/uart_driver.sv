@@ -2,11 +2,13 @@
 // Project     : UART_UVM_VERIFICATION
 // File        : uart_driver.sv
 // Author      : Brahma Ganesh Katrapalli
-// Date        : 27-12-2025
-// Version     : 1.1
-// Description : UVM driver for UART transactions,
-//               drives stimulus to DUT via interface
-//               with start, data, parity, and stop bits.
+// Date        : 30-12-2025
+// Version     : 1.2
+// Description : UVM driver for UART transactions.
+//               Drives stimulus to DUT via interface,
+//               handling start, data, parity, and stop bits.
+//               Supports error injection for parity and frame
+//               to validate DUT error detection logic.
 //=====================================================
 
 class uart_driver extends uvm_driver #(uart_transaction);
@@ -15,6 +17,7 @@ class uart_driver extends uvm_driver #(uart_transaction);
     virtual uart_interface vif;
     uart_transaction tr;
     logic [12:0] tx_counter;
+    bit parity_bit;
     
     function new(string name = "uart_driver", uvm_component parent = null);
         super.new(name, parent);
@@ -69,21 +72,29 @@ class uart_driver extends uvm_driver #(uart_transaction);
     	seq_item_port.get_next_item(tr);
             wait(vif.rst_n);
             vif.tx_data     <= tr.tx_data;
-            vif.clk_per_bit   <= tr.clk_per_bit;
-      		vif.tx <= 0;
+            parity_bit      <= ^tr.tx_data;
+            vif.clk_per_bit <= tr.clk_per_bit;
+            vif.parity_en   <= tr.parity_en;
+      		
+            vif.tx          <= 1'b0;
             `uvm_info(get_type_name(),$sformatf("START DATA SEND tx =%0d",vif.tx),UVM_LOW)
             
             run();
 
             if(tr.parity_en)begin
-                vif.parity_en <= tr.parity_en;
                 tx_counter = 0;
                 while (tx_counter < tr.clk_per_bit) begin
       		        @(posedge vif.clk);
       		        tx_counter++;
     		    end
-    		    vif.tx <= ^tr.tx_data;
-                `uvm_info(get_type_name(),$sformatf("PARITY DATA SEND tx =%0d",vif.tx),UVM_LOW)
+                if(tr.parity_error_injection) begin
+    		        vif.tx <= ~parity_bit;
+                    `uvm_info(get_type_name(),$sformatf("PARITY injection DATA SEND tx =%0d parity_bit=%0b",vif.tx,parity_bit),UVM_LOW)
+                end
+                else begin
+                    vif.tx <= parity_bit;
+                    `uvm_info(get_type_name(),$sformatf("PARITY DATA SEND tx =%0d",vif.tx),UVM_LOW)
+                end
             end
     		
             tx_counter = 0;
@@ -91,10 +102,20 @@ class uart_driver extends uvm_driver #(uart_transaction);
       		    @(posedge vif.clk);
       		    tx_counter++;
     		end
-    		vif.tx <= 1;
+    		if(tr.frame_error_injection)
+                vif.tx <= 1'b0;
+            else
+                vif.tx <= 1'b1;
              `uvm_info(get_type_name(),$sformatf("STOP DATA SEND tx =%0d",vif.tx),UVM_LOW)
+		    
+            tx_counter = 0;
+            while (tx_counter < tr.clk_per_bit) begin
+      		    @(posedge vif.clk);
+      		    tx_counter++;
+    		end
+      		vif.tx <= 1'b1;
 
-            repeat(13)begin
+            repeat(14)begin
             tx_counter = 0;
                 while (tx_counter < tr.clk_per_bit) begin
       		        @(posedge vif.clk);
