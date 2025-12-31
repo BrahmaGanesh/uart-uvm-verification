@@ -2,10 +2,12 @@
 // Project     : UART_UVM_VERIFICATION
 // File        : uart_env.sv
 // Author      : Brahma Ganesh Katrapalli
-// Date        : 28-12-2025
-// Version     : 1.1
-// Description : UART UVM environment with agent, scoreboard, and coverage.
-//               Connects monitor analysis ports and reports results.
+// Date        : 31-12-2025
+// Version     : 1.2
+// Description : UART UVM environment integrating agent,
+//               scoreboard, and coverage. Connects monitor
+//               analysis ports, tracks results, and reports
+//               coverage and pass/fail statistics.
 //=====================================================
 
 class uart_env extends uvm_env;
@@ -51,9 +53,10 @@ class uart_env extends uvm_env;
     endfunction
 
     function void report_phase(uvm_phase phase);
-        `uvm_info("Report",$sformatf("Total Reads   : %0d",Total),UVM_LOW)
-        `uvm_info("Report",$sformatf("Total PASS    : %0d",Pass),UVM_LOW)
-        `uvm_info("Report",$sformatf("Total FAIL    : %0d",Fail),UVM_LOW)
+        `uvm_info("Report",$sformatf("Total Coverage    : %0d",cov.uart_cg.get_coverage()),UVM_LOW)
+        `uvm_info("Report",$sformatf("Total Reads       : %0d",Total),UVM_LOW)
+        `uvm_info("Report",$sformatf("Total PASS        : %0d",Pass),UVM_LOW)
+        `uvm_info("Report",$sformatf("Total FAIL        : %0d",Fail),UVM_LOW)
     endfunction
 
     function void final_phase(uvm_phase phase);
