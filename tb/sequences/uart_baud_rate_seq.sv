@@ -2,8 +2,8 @@
 // Project     : UART_UVM_VERIFICATION
 // File        : uart_baud_rate_seq.sv
 // Author      : Brahma Ganesh Katrapalli
-// Date        : 30-12-2025
-// Version     : 1.0
+// Date        : 31-12-2025
+// Version     : 1.1
 // Description : UART UVM sequence/test that generates
 //               transactions at multiple baud rates
 //               (9600, 10102, 115200) for validation.
@@ -16,6 +16,8 @@ class uart_baud_rate_seq extends uart_sequence;
     
   	localparam int CLK_PERIOD_NS = 120;
     localparam int CLK_FREQ_HZ   = 1_000_000_000 / CLK_PERIOD_NS;
+    int unsigned baud_list[] = '{9600, 10102, 115200};
+    int unsigned data_list[] = '{8'h00, 8'hFF, 8'h05, 8'h40, 8'h90};
 
 
     function new(string name="uart_baud_rate_seq");
@@ -23,25 +25,16 @@ class uart_baud_rate_seq extends uart_sequence;
     endfunction
 
     virtual task body();
-        tr = uart_transaction::type_id::create("tr");
-        tr.randomize();
-        tr.baud_rate = 17'd9600;
-        tr.clk_per_bit = CLK_FREQ_HZ / tr.baud_rate;
-        tr.frame_error_injection = 1'b0;
-        start_item(tr);
-        finish_item(tr);
-        tr.randomize();
-        tr.baud_rate = 17'd10102;
-        tr.clk_per_bit = CLK_FREQ_HZ / tr.baud_rate;
-        tr.frame_error_injection = 1'b0;
-        start_item(tr);
-        finish_item(tr);
-        tr.randomize();
-        tr.baud_rate = 17'd115200;
-        tr.clk_per_bit = CLK_FREQ_HZ / tr.baud_rate;
-        tr.frame_error_injection = 1'b0;
-        start_item(tr);
-        finish_item(tr);
+        foreach(baud_list[i])begin
+            foreach (data_list[j]) begin
+                tr = uart_transaction::type_id::create($sformatf("tr_baud_%0d_data_%0h", baud_list[i], data_list[j]));
+                assert(tr.randomize() with { baud_rate == baud_list[i]; tx_data == data_list[j]; });
+                tr.clk_per_bit = CLK_FREQ_HZ / tr.baud_rate;
+                tr.frame_error_injection = 1'b0;
+                start_item(tr);
+                finish_item(tr);
+            end
+        end
     endtask
 endclass
 
