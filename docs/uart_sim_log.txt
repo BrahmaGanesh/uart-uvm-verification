@@ -1,0 +1,1787 @@
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test uart_virtual_test...
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_root.svh(589) @ 0: reporter [UVMTOP] UVM testbench topology:
+--------------------------------------------------------------
+Name                       Type                    Size  Value
+--------------------------------------------------------------
+uvm_test_top               uart_virtual_test       -     @341 
+  env                      uart_env                -     @354 
+    cov                    uart_coverage           -     @397 
+      cov_export           uvm_analysis_imp        -     @406 
+    m_agent                uart_agent              -     @369 
+      drv                  uart_driver             -     @554 
+        rsp_port           uvm_analysis_port       -     @573 
+        seq_item_port      uvm_seq_item_pull_port  -     @563 
+      mon                  uart_monitor            -     @583 
+        mon_ap             uvm_analysis_port       -     @592 
+      seqr                 uart_sequencer          -     @417 
+        rsp_export         uvm_analysis_export     -     @426 
+        seq_item_export    uvm_seq_item_pull_imp   -     @544 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    soc                    uart_scoreboard         -     @378 
+      soc_export           uvm_analysis_imp        -     @387 
+--------------------------------------------------------------
+
+UVM_INFO uart_driver.sv(36) @ 0: uvm_test_top.env.m_agent.drv [uart_driver] Start of Simulation...
+UVM_INFO uart_driver.sv(41) @ 0: uvm_test_top.env.m_agent.drv [PHASE] Preparing reset...
+UVM_INFO uart_driver.sv(50) @ 200000: uvm_test_top.env.m_agent.drv [PHASE] Reset applied...
+UVM_INFO uart_driver.sv(81) @ 200000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =x
+UVM_INFO uart_driver.sv(55) @ 200000: uvm_test_top.env.m_agent.drv [PHASE] Reset Completed...
+UVM_INFO uart_driver.sv(65) @ 8820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c7 tx=1
+UVM_INFO uart_driver.sv(65) @ 17460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c7 tx=1
+UVM_INFO uart_driver.sv(65) @ 26100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c7 tx=1
+UVM_INFO uart_driver.sv(65) @ 34740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c7 tx=0
+UVM_INFO uart_driver.sv(65) @ 43380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c7 tx=0
+UVM_INFO uart_driver.sv(65) @ 52020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c7 tx=0
+UVM_INFO uart_driver.sv(65) @ 60660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c7 tx=1
+UVM_INFO uart_driver.sv(65) @ 69300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c7 tx=1
+UVM_INFO uart_driver.sv(93) @ 77940000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY injection DATA SEND tx =1 parity_bit=1
+UVM_INFO uart_driver.sv(110) @ 86580000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(46) @ 91140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected frame error...
+UVM_INFO uart_monitor.sv(72) @ 91140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=1 | frame_err=1
+UVM_INFO uart_monitor.sv(82) @ 99780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 99780000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 216180000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 224820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =85 tx=1
+UVM_INFO uart_driver.sv(65) @ 233460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =85 tx=0
+UVM_INFO uart_driver.sv(65) @ 242100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =85 tx=1
+UVM_INFO uart_driver.sv(65) @ 250740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =85 tx=0
+UVM_INFO uart_driver.sv(65) @ 259380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =85 tx=0
+UVM_INFO uart_driver.sv(65) @ 268020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =85 tx=0
+UVM_INFO uart_driver.sv(65) @ 276660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =85 tx=0
+UVM_INFO uart_driver.sv(65) @ 285300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =85 tx=1
+UVM_INFO uart_driver.sv(93) @ 293940000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY injection DATA SEND tx =1 parity_bit=1
+UVM_INFO uart_driver.sv(110) @ 302580000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 307140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 316020000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 333300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=1
+UVM_INFO uart_monitor.sv(63) @ 341940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 350580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 359220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 367860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 376500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 385140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 393780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=1
+UVM_INFO uart_monitor.sv(69) @ 402420000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 402420000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x85 | rx_valid=0 | parity_err=1 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 411060000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 411060000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x85
+UVM_INFO uart_driver.sv(81) @ 432180000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 440820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c4 tx=0
+UVM_INFO uart_driver.sv(65) @ 449460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c4 tx=0
+UVM_INFO uart_driver.sv(65) @ 458100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c4 tx=1
+UVM_INFO uart_driver.sv(65) @ 466740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c4 tx=0
+UVM_INFO uart_driver.sv(65) @ 475380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c4 tx=0
+UVM_INFO uart_driver.sv(65) @ 484020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c4 tx=0
+UVM_INFO uart_driver.sv(65) @ 492660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c4 tx=1
+UVM_INFO uart_driver.sv(65) @ 501300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c4 tx=1
+UVM_INFO uart_driver.sv(97) @ 509940000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY DATA SEND tx =1
+UVM_INFO uart_driver.sv(110) @ 518580000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(46) @ 523140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected frame error...
+UVM_INFO uart_monitor.sv(72) @ 523140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=0 | frame_err=1
+UVM_INFO uart_monitor.sv(82) @ 531780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 531780000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 648180000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 656820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fe tx=0
+UVM_INFO uart_driver.sv(65) @ 665460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fe tx=1
+UVM_INFO uart_driver.sv(65) @ 674100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fe tx=1
+UVM_INFO uart_driver.sv(65) @ 682740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fe tx=1
+UVM_INFO uart_driver.sv(65) @ 691380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fe tx=1
+UVM_INFO uart_driver.sv(65) @ 700020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fe tx=1
+UVM_INFO uart_driver.sv(65) @ 708660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fe tx=1
+UVM_INFO uart_driver.sv(65) @ 717300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fe tx=1
+UVM_INFO uart_driver.sv(93) @ 725940000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY injection DATA SEND tx =1 parity_bit=1
+UVM_INFO uart_driver.sv(110) @ 734580000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(46) @ 739140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected frame error...
+UVM_INFO uart_monitor.sv(72) @ 739140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=1 | frame_err=1
+UVM_INFO uart_monitor.sv(82) @ 747780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 747780000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 864180000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 872820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =6 tx=0
+UVM_INFO uart_driver.sv(65) @ 881460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =6 tx=1
+UVM_INFO uart_driver.sv(65) @ 890100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =6 tx=1
+UVM_INFO uart_driver.sv(65) @ 898740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =6 tx=0
+UVM_INFO uart_driver.sv(65) @ 907380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =6 tx=0
+UVM_INFO uart_driver.sv(65) @ 916020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =6 tx=0
+UVM_INFO uart_driver.sv(65) @ 924660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =6 tx=0
+UVM_INFO uart_driver.sv(65) @ 933300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =6 tx=0
+UVM_INFO uart_driver.sv(93) @ 941940000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY injection DATA SEND tx =0 parity_bit=0
+UVM_INFO uart_driver.sv(110) @ 950580000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(54) @ 955140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 964020000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 981300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 989940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=1
+UVM_INFO uart_monitor.sv(63) @ 998580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 1007220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 1015860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 1024500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 1033140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 1041780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(69) @ 1050420000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 1050420000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x6 | rx_valid=0 | parity_err=1 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 1059060000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 1059060000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x6
+UVM_INFO uart_driver.sv(81) @ 1080180000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 1088820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =e6 tx=0
+UVM_INFO uart_driver.sv(65) @ 1097460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =e6 tx=1
+UVM_INFO uart_driver.sv(65) @ 1106100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =e6 tx=1
+UVM_INFO uart_driver.sv(65) @ 1114740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =e6 tx=0
+UVM_INFO uart_driver.sv(65) @ 1123380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =e6 tx=0
+UVM_INFO uart_driver.sv(65) @ 1132020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =e6 tx=1
+UVM_INFO uart_driver.sv(65) @ 1140660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =e6 tx=1
+UVM_INFO uart_driver.sv(65) @ 1149300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =e6 tx=1
+UVM_INFO uart_driver.sv(110) @ 1157940000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(54) @ 1162500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 1171380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 1188660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 1197300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=1
+UVM_INFO uart_monitor.sv(63) @ 1205940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 1214580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 1223220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 1231860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=1
+UVM_INFO uart_monitor.sv(63) @ 1240500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=1
+UVM_INFO uart_monitor.sv(63) @ 1249140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=1
+UVM_INFO uart_monitor.sv(72) @ 1249140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0xe6 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 1257780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 1257780000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0xe6
+UVM_INFO uart_driver.sv(81) @ 1287540000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 1684740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =b5 tx=1
+UVM_INFO uart_driver.sv(65) @ 2081940000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =b5 tx=0
+UVM_INFO uart_driver.sv(65) @ 2479140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =b5 tx=1
+UVM_INFO uart_driver.sv(65) @ 2876340000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =b5 tx=0
+UVM_INFO uart_driver.sv(65) @ 3273540000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =b5 tx=1
+UVM_INFO uart_driver.sv(65) @ 3670740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =b5 tx=1
+UVM_INFO uart_driver.sv(65) @ 4067940000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =b5 tx=0
+UVM_INFO uart_driver.sv(65) @ 4465140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =b5 tx=1
+UVM_INFO uart_driver.sv(110) @ 4862340000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(46) @ 5061180000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected frame error...
+UVM_INFO uart_monitor.sv(72) @ 5061180000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=0 | frame_err=1
+UVM_INFO uart_monitor.sv(82) @ 5458380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 5458380000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 10820340000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 10950900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fe tx=0
+UVM_INFO uart_driver.sv(65) @ 11081460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fe tx=1
+UVM_INFO uart_driver.sv(65) @ 11212020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fe tx=1
+UVM_INFO uart_driver.sv(65) @ 11342580000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fe tx=1
+UVM_INFO uart_driver.sv(65) @ 11473140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fe tx=1
+UVM_INFO uart_driver.sv(65) @ 11603700000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fe tx=1
+UVM_INFO uart_driver.sv(65) @ 11734260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fe tx=1
+UVM_INFO uart_driver.sv(65) @ 11864820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fe tx=1
+UVM_INFO uart_driver.sv(110) @ 11995380000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(54) @ 12060900000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 12191700000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 12452820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 12583380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=1
+UVM_INFO uart_monitor.sv(63) @ 12713940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 12844500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=1
+UVM_INFO uart_monitor.sv(63) @ 12975060000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=1
+UVM_INFO uart_monitor.sv(63) @ 13105620000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=1
+UVM_INFO uart_monitor.sv(63) @ 13236180000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=1
+UVM_INFO uart_monitor.sv(63) @ 13366740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=1
+UVM_INFO uart_monitor.sv(72) @ 13366740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0xfe | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 13497300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 13497300000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0xfe
+UVM_INFO uart_driver.sv(81) @ 13953780000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 14500860000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d tx=1
+UVM_INFO uart_driver.sv(65) @ 15047940000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d tx=0
+UVM_INFO uart_driver.sv(65) @ 15595020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d tx=1
+UVM_INFO uart_driver.sv(65) @ 16142100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d tx=1
+UVM_INFO uart_driver.sv(65) @ 16689180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d tx=0
+UVM_INFO uart_driver.sv(65) @ 17236260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d tx=0
+UVM_INFO uart_driver.sv(65) @ 17783340000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d tx=0
+UVM_INFO uart_driver.sv(65) @ 18330420000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d tx=0
+UVM_INFO uart_driver.sv(93) @ 18877500000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY injection DATA SEND tx =0 parity_bit=1
+UVM_INFO uart_driver.sv(110) @ 19424580000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(46) @ 19698300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected frame error...
+UVM_INFO uart_monitor.sv(72) @ 19698300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=1 | frame_err=1
+UVM_INFO uart_monitor.sv(82) @ 20245380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 20245380000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 27630780000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 28200420000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =25 tx=1
+UVM_INFO uart_driver.sv(65) @ 28770060000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =25 tx=0
+UVM_INFO uart_driver.sv(65) @ 29339700000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =25 tx=1
+UVM_INFO uart_driver.sv(65) @ 29909340000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =25 tx=0
+UVM_INFO uart_driver.sv(65) @ 30478980000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =25 tx=0
+UVM_INFO uart_driver.sv(65) @ 31048620000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =25 tx=1
+UVM_INFO uart_driver.sv(65) @ 31618260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =25 tx=0
+UVM_INFO uart_driver.sv(65) @ 32187900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =25 tx=0
+UVM_INFO uart_driver.sv(110) @ 32757540000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(46) @ 33042540000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected frame error...
+UVM_INFO uart_monitor.sv(72) @ 33042540000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=0 | frame_err=1
+UVM_INFO uart_monitor.sv(82) @ 33612180000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 33612180000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 41302140000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 41440500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =3c tx=0
+UVM_INFO uart_driver.sv(65) @ 41578860000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =3c tx=0
+UVM_INFO uart_driver.sv(65) @ 41717220000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =3c tx=1
+UVM_INFO uart_driver.sv(65) @ 41855580000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =3c tx=1
+UVM_INFO uart_driver.sv(65) @ 41993940000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =3c tx=1
+UVM_INFO uart_driver.sv(65) @ 42132300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =3c tx=1
+UVM_INFO uart_driver.sv(65) @ 42270660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =3c tx=0
+UVM_INFO uart_driver.sv(65) @ 42409020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =3c tx=0
+UVM_INFO uart_driver.sv(110) @ 42547380000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 42616740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 42755340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 43032060000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 43170420000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 43308780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 43447140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=1
+UVM_INFO uart_monitor.sv(63) @ 43585500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=1
+UVM_INFO uart_monitor.sv(63) @ 43723860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=1
+UVM_INFO uart_monitor.sv(63) @ 43862220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 44000580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(72) @ 44000580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x3c | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 44138940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 44138940000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x3c
+UVM_INFO uart_driver.sv(81) @ 44622780000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 45495540000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c3 tx=1
+UVM_INFO uart_driver.sv(65) @ 46368300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c3 tx=1
+UVM_INFO uart_driver.sv(65) @ 47241060000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c3 tx=0
+UVM_INFO uart_driver.sv(65) @ 48113820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c3 tx=0
+UVM_INFO uart_driver.sv(65) @ 48986580000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c3 tx=0
+UVM_INFO uart_driver.sv(65) @ 49859340000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c3 tx=0
+UVM_INFO uart_driver.sv(65) @ 50732100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c3 tx=1
+UVM_INFO uart_driver.sv(65) @ 51604860000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =c3 tx=1
+UVM_INFO uart_driver.sv(97) @ 52477620000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY DATA SEND tx =1
+UVM_INFO uart_driver.sv(110) @ 53350380000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(46) @ 53786940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected frame error...
+UVM_INFO uart_monitor.sv(72) @ 53786940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=0 | frame_err=1
+UVM_INFO uart_monitor.sv(82) @ 54659700000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 54659700000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 66441780000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 67341300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5a tx=0
+UVM_INFO uart_driver.sv(65) @ 68240820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5a tx=1
+UVM_INFO uart_driver.sv(65) @ 69140340000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5a tx=0
+UVM_INFO uart_driver.sv(65) @ 70039860000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5a tx=1
+UVM_INFO uart_driver.sv(65) @ 70939380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5a tx=1
+UVM_INFO uart_driver.sv(65) @ 71838900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5a tx=0
+UVM_INFO uart_driver.sv(65) @ 72738420000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5a tx=1
+UVM_INFO uart_driver.sv(65) @ 73637940000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5a tx=0
+UVM_INFO uart_driver.sv(93) @ 74537460000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY injection DATA SEND tx =0 parity_bit=0
+UVM_INFO uart_driver.sv(110) @ 75436980000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(54) @ 75886980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 76786740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 78585780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 79485300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=1
+UVM_INFO uart_monitor.sv(63) @ 80384820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 81284340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=1
+UVM_INFO uart_monitor.sv(63) @ 82183860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=1
+UVM_INFO uart_monitor.sv(63) @ 83083380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 83982900000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=1
+UVM_INFO uart_monitor.sv(63) @ 84882420000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(69) @ 85781940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 85781940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x5a | rx_valid=0 | parity_err=1 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 86681460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 86681460000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x5a
+UVM_INFO uart_driver.sv(81) @ 88929780000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 89093820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =bf tx=1
+UVM_INFO uart_driver.sv(65) @ 89257860000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =bf tx=1
+UVM_INFO uart_driver.sv(65) @ 89421900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =bf tx=1
+UVM_INFO uart_driver.sv(65) @ 89585940000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =bf tx=1
+UVM_INFO uart_driver.sv(65) @ 89749980000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =bf tx=1
+UVM_INFO uart_driver.sv(65) @ 89914020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =bf tx=1
+UVM_INFO uart_driver.sv(65) @ 90078060000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =bf tx=0
+UVM_INFO uart_driver.sv(65) @ 90242100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =bf tx=1
+UVM_INFO uart_driver.sv(97) @ 90406140000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY DATA SEND tx =1
+UVM_INFO uart_driver.sv(110) @ 90570180000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(46) @ 90652380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected frame error...
+UVM_INFO uart_monitor.sv(72) @ 90652380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=0 | frame_err=1
+UVM_INFO uart_monitor.sv(82) @ 90816420000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 90816420000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 93030780000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 93139500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =b5 tx=1
+UVM_INFO uart_driver.sv(65) @ 93248220000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =b5 tx=0
+UVM_INFO uart_driver.sv(65) @ 93356940000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =b5 tx=1
+UVM_INFO uart_driver.sv(65) @ 93465660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =b5 tx=0
+UVM_INFO uart_driver.sv(65) @ 93574380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =b5 tx=1
+UVM_INFO uart_driver.sv(65) @ 93683100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =b5 tx=1
+UVM_INFO uart_driver.sv(65) @ 93791820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =b5 tx=0
+UVM_INFO uart_driver.sv(65) @ 93900540000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =b5 tx=1
+UVM_INFO uart_driver.sv(93) @ 94009260000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY injection DATA SEND tx =1 parity_bit=1
+UVM_INFO uart_driver.sv(110) @ 94117980000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(46) @ 94172580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected frame error...
+UVM_INFO uart_monitor.sv(72) @ 94172580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=1 | frame_err=1
+UVM_INFO uart_monitor.sv(82) @ 94281300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 94281300000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 95748780000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 96593340000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fc tx=0
+UVM_INFO uart_driver.sv(65) @ 97437900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fc tx=0
+UVM_INFO uart_driver.sv(65) @ 98282460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fc tx=1
+UVM_INFO uart_driver.sv(65) @ 99127020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fc tx=1
+UVM_INFO uart_driver.sv(65) @ 99971580000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fc tx=1
+UVM_INFO uart_driver.sv(65) @ 100816140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fc tx=1
+UVM_INFO uart_driver.sv(65) @ 101660700000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fc tx=1
+UVM_INFO uart_driver.sv(65) @ 102505260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =fc tx=1
+UVM_INFO uart_driver.sv(110) @ 103349820000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(46) @ 103772340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected frame error...
+UVM_INFO uart_monitor.sv(72) @ 103772340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=0 | frame_err=1
+UVM_INFO uart_monitor.sv(82) @ 104616900000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 104616900000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 116018220000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 116122380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 116226540000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 116330700000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 116434860000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 116539020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 116643180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 116747340000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 116851500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(110) @ 116955660000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 117007980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 117112380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 117320700000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 117424860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 117529020000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 117633180000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 117737340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 117841500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 117945660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 118049820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(72) @ 118049820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 118153980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 118153980000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 118518060000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 118622220000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 118726380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 118830540000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 118934700000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 119038860000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 119143020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 119247180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 119351340000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(93) @ 119455500000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY injection DATA SEND tx =1 parity_bit=0
+UVM_INFO uart_driver.sv(110) @ 119559660000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(54) @ 119611980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 119716380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 119924700000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=1
+UVM_INFO uart_monitor.sv(63) @ 120028860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=1
+UVM_INFO uart_monitor.sv(63) @ 120133020000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 120237180000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=1
+UVM_INFO uart_monitor.sv(63) @ 120341340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=1
+UVM_INFO uart_monitor.sv(63) @ 120445500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=1
+UVM_INFO uart_monitor.sv(63) @ 120549660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=1
+UVM_INFO uart_monitor.sv(63) @ 120653820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=1
+UVM_INFO uart_monitor.sv(69) @ 120757980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 120757980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0xff | rx_valid=0 | parity_err=1 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 120862140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 120862140000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0xff
+UVM_INFO uart_driver.sv(81) @ 121122060000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 121226220000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=1
+UVM_INFO uart_driver.sv(65) @ 121330380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 121434540000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=1
+UVM_INFO uart_driver.sv(65) @ 121538700000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 121642860000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 121747020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 121851180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 121955340000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(110) @ 122059500000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 122111820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 122216220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 122424540000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=1
+UVM_INFO uart_monitor.sv(63) @ 122528700000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 122632860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 122737020000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 122841180000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 122945340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 123049500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 123153660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(72) @ 123153660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x5 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 123257820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 123257820000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x5
+UVM_INFO uart_driver.sv(81) @ 123621900000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 123726060000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 123830220000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 123934380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 124038540000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 124142700000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 124246860000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 124351020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=1
+UVM_INFO uart_driver.sv(65) @ 124455180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(93) @ 124559340000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY injection DATA SEND tx =0 parity_bit=1
+UVM_INFO uart_driver.sv(110) @ 124663500000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 124715820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 124820220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 125028540000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 125132700000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 125236860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 125341020000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 125445180000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 125549340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 125653500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=1
+UVM_INFO uart_monitor.sv(63) @ 125757660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(69) @ 125861820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 125861820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x40 | rx_valid=0 | parity_err=1 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 125965980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 125965980000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x40
+UVM_INFO uart_driver.sv(81) @ 126225900000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 126330060000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 126434220000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 126538380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 126642540000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 126746700000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=1
+UVM_INFO uart_driver.sv(65) @ 126850860000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 126955020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 127059180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=1
+UVM_INFO uart_driver.sv(110) @ 127163340000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(54) @ 127215660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 127320060000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 127528380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 127632540000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 127736700000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 127840860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 127945020000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=1
+UVM_INFO uart_monitor.sv(63) @ 128049180000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 128153340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 128257500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=1
+UVM_INFO uart_monitor.sv(72) @ 128257500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x90 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 128361660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 128361660000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x90
+UVM_INFO uart_driver.sv(81) @ 128725740000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 128824620000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 128923500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 129022380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 129121260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 129220140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 129319020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 129417900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 129516780000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(97) @ 129615660000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY DATA SEND tx =0
+UVM_INFO uart_driver.sv(110) @ 129714540000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 129764220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 129863340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 130061100000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 130159980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 130258860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 130357740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 130456620000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 130555500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 130654380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 130753260000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(69) @ 130852140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 130852140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 130951020000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 130951020000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 131197740000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 131296620000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 131395500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 131494380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 131593260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 131692140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 131791020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 131889900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 131988780000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(110) @ 132087660000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(54) @ 132137340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 132236460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 132434220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=1
+UVM_INFO uart_monitor.sv(63) @ 132533100000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=1
+UVM_INFO uart_monitor.sv(63) @ 132631980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 132730860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=1
+UVM_INFO uart_monitor.sv(63) @ 132829740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=1
+UVM_INFO uart_monitor.sv(63) @ 132928620000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=1
+UVM_INFO uart_monitor.sv(63) @ 133027500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=1
+UVM_INFO uart_monitor.sv(63) @ 133126380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=1
+UVM_INFO uart_monitor.sv(72) @ 133126380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0xff | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 133225260000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 133225260000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0xff
+UVM_INFO uart_driver.sv(81) @ 133570860000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 133669740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=1
+UVM_INFO uart_driver.sv(65) @ 133768620000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 133867500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=1
+UVM_INFO uart_driver.sv(65) @ 133966380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 134065260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 134164140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 134263020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 134361900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(97) @ 134460780000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY DATA SEND tx =0
+UVM_INFO uart_driver.sv(110) @ 134559660000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 134609340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 134708460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 134906220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=1
+UVM_INFO uart_monitor.sv(63) @ 135005100000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 135103980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 135202860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 135301740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 135400620000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 135499500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 135598380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(69) @ 135697260000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 135697260000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x5 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 135796140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 135796140000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x5
+UVM_INFO uart_driver.sv(81) @ 136042860000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 136141740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 136240620000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 136339500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 136438380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 136537260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 136636140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 136735020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=1
+UVM_INFO uart_driver.sv(65) @ 136833900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(110) @ 136932780000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 136982460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 137081580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 137279340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 137378220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 137477100000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 137575980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 137674860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 137773740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 137872620000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=1
+UVM_INFO uart_monitor.sv(63) @ 137971500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(72) @ 137971500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x40 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 138070380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 138070380000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x40
+UVM_INFO uart_driver.sv(81) @ 138415980000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 138514860000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 138613740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 138712620000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 138811500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 138910380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=1
+UVM_INFO uart_driver.sv(65) @ 139009260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 139108140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 139207020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=1
+UVM_INFO uart_driver.sv(110) @ 139305900000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(54) @ 139355580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 139454700000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 139652460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 139751340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 139850220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 139949100000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 140047980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=1
+UVM_INFO uart_monitor.sv(63) @ 140146860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 140245740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 140344620000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=1
+UVM_INFO uart_monitor.sv(72) @ 140344620000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x90 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 140443500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 140443500000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x90
+UVM_INFO uart_driver.sv(81) @ 140789100000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 140797740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 140806380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 140815020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 140823660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 140832300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 140840940000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 140849580000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 140858220000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(93) @ 140866860000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY injection DATA SEND tx =0 parity_bit=0
+UVM_INFO uart_driver.sv(110) @ 140875500000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(54) @ 140880060000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 140888940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 140906220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 140914860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 140923500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 140932140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 140940780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 140949420000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 140958060000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 140966700000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(69) @ 140975340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 140975340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=1 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 140983980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 140983980000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 141005100000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 141013740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 141022380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 141031020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 141039660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 141048300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 141056940000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 141065580000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 141074220000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(110) @ 141082860000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(54) @ 141087420000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 141096300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 141113580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=1
+UVM_INFO uart_monitor.sv(63) @ 141122220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=1
+UVM_INFO uart_monitor.sv(63) @ 141130860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 141139500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=1
+UVM_INFO uart_monitor.sv(63) @ 141148140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=1
+UVM_INFO uart_monitor.sv(63) @ 141156780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=1
+UVM_INFO uart_monitor.sv(63) @ 141165420000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=1
+UVM_INFO uart_monitor.sv(63) @ 141174060000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=1
+UVM_INFO uart_monitor.sv(72) @ 141174060000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0xff | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 141182700000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 141182700000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0xff
+UVM_INFO uart_driver.sv(81) @ 141212460000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 141221100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=1
+UVM_INFO uart_driver.sv(65) @ 141229740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 141238380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=1
+UVM_INFO uart_driver.sv(65) @ 141247020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 141255660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 141264300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 141272940000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 141281580000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(110) @ 141290220000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 141294780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 141303660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 141320940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=1
+UVM_INFO uart_monitor.sv(63) @ 141329580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 141338220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 141346860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 141355500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 141364140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 141372780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 141381420000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(72) @ 141381420000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x5 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 141390060000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 141390060000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x5
+UVM_INFO uart_driver.sv(81) @ 141419820000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 141428460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 141437100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 141445740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 141454380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 141463020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 141471660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 141480300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=1
+UVM_INFO uart_driver.sv(65) @ 141488940000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(93) @ 141497580000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY injection DATA SEND tx =0 parity_bit=1
+UVM_INFO uart_driver.sv(110) @ 141506220000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 141510780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 141519660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 141536940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 141545580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 141554220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 141562860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 141571500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 141580140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 141588780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=1
+UVM_INFO uart_monitor.sv(63) @ 141597420000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(69) @ 141606060000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 141606060000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x40 | rx_valid=0 | parity_err=1 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 141614700000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 141614700000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x40
+UVM_INFO uart_driver.sv(81) @ 141635820000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 141644460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 141653100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 141661740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 141670380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 141679020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=1
+UVM_INFO uart_driver.sv(65) @ 141687660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 141696300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 141704940000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=1
+UVM_INFO uart_driver.sv(97) @ 141713580000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY DATA SEND tx =1
+UVM_INFO uart_driver.sv(110) @ 141722220000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 141726780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 141735660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 141752940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 141761580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 141770220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 141778860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 141787500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=1
+UVM_INFO uart_monitor.sv(63) @ 141796140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 141804780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 141813420000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=1
+UVM_INFO uart_monitor.sv(69) @ 141822060000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 141822060000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x90 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 141830700000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 141830700000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x90
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_objection.svh(1276) @ 141851820000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO uart_env.sv(50) @ 141851820000: uvm_test_top.env [uart_env] Check Passed : no Mismatched 
+UVM_INFO uart_env.sv(54) @ 141851820000: uvm_test_top.env [Report] Total Coverage    : 100
+UVM_INFO uart_env.sv(55) @ 141851820000: uvm_test_top.env [Report] Total Reads       : 31
+UVM_INFO uart_env.sv(56) @ 141851820000: uvm_test_top.env [Report] Total PASS        : 31
+UVM_INFO uart_env.sv(57) @ 141851820000: uvm_test_top.env [Report] Total FAIL        : 0
+UVM_INFO uart_env.sv(62) @ 141851820000: uvm_test_top.env [PHASE] Clean up phase.....
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_report_server.svh(904) @ 141851820000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  664
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[PHASE]     4
+[RNTST]     1
+[Report]     4
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[UVMTOP]     1
+[uart_driver]   328
+[uart_env]     1
+[uart_monitor]   292
+[uart_scoreboard]    31
+
+$finish called from file "/apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_root.svh", line 527.
+$finish at simulation time         141851820000
+"uart_interface.sv", 57: tb.vif.unnamed$$_4, 1182098 attempts, 21 match
+"uart_interface.sv", 58: tb.vif.unnamed$$_5, 1182098 attempts, 21 match
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 141851820000 ps
+CPU Time:      3.410 seconds;       Data structure size:   0.3Mb
+Wed Dec 31 10:17:15 2025
+Finding VCD file...
+./waveform.vcd
+[2025-12-31 15:17:16 UTC] Opening EPWave...
+Done
+
+UVM_INFO @ 0: reporter [RNTST] Running test uart_back_to_back_test...
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_root.svh(589) @ 0: reporter [UVMTOP] UVM testbench topology:
+--------------------------------------------------------------
+Name                       Type                    Size  Value
+--------------------------------------------------------------
+uvm_test_top               uart_back_to_back_test  -     @341 
+  env                      uart_env                -     @354 
+    cov                    uart_coverage           -     @397 
+      cov_export           uvm_analysis_imp        -     @406 
+    m_agent                uart_agent              -     @369 
+      drv                  uart_driver             -     @554 
+        rsp_port           uvm_analysis_port       -     @573 
+        seq_item_port      uvm_seq_item_pull_port  -     @563 
+      mon                  uart_monitor            -     @583 
+        mon_ap             uvm_analysis_port       -     @592 
+      seqr                 uart_sequencer          -     @417 
+        rsp_export         uvm_analysis_export     -     @426 
+        seq_item_export    uvm_seq_item_pull_imp   -     @544 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    soc                    uart_scoreboard         -     @378 
+      soc_export           uvm_analysis_imp        -     @387 
+--------------------------------------------------------------
+
+UVM_INFO uart_driver.sv(36) @ 0: uvm_test_top.env.m_agent.drv [uart_driver] Start of Simulation...
+UVM_INFO uart_driver.sv(41) @ 0: uvm_test_top.env.m_agent.drv [PHASE] Preparing reset...
+UVM_INFO uart_driver.sv(50) @ 200000: uvm_test_top.env.m_agent.drv [PHASE] Reset applied...
+UVM_INFO uart_driver.sv(81) @ 200000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =x
+UVM_INFO uart_driver.sv(55) @ 200000: uvm_test_top.env.m_agent.drv [PHASE] Reset Completed...
+UVM_INFO uart_driver.sv(65) @ 8820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=1
+UVM_INFO uart_driver.sv(65) @ 17460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=0
+UVM_INFO uart_driver.sv(65) @ 26100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=1
+UVM_INFO uart_driver.sv(65) @ 34740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=1
+UVM_INFO uart_driver.sv(65) @ 43380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=0
+UVM_INFO uart_driver.sv(65) @ 52020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=1
+UVM_INFO uart_driver.sv(65) @ 60660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=0
+UVM_INFO uart_driver.sv(65) @ 69300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=1
+UVM_INFO uart_driver.sv(110) @ 77940000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(54) @ 82500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 91380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 108660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=1
+UVM_INFO uart_monitor.sv(63) @ 117300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 125940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 134580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=1
+UVM_INFO uart_monitor.sv(63) @ 143220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 151860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=1
+UVM_INFO uart_monitor.sv(63) @ 160500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 169140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=1
+UVM_INFO uart_monitor.sv(72) @ 169140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0xad | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 177780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 177780000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0xad
+UVM_INFO uart_driver.sv(81) @ 207540000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 216180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=1
+UVM_INFO uart_driver.sv(65) @ 224820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=0
+UVM_INFO uart_driver.sv(65) @ 233460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=1
+UVM_INFO uart_driver.sv(65) @ 242100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=0
+UVM_INFO uart_driver.sv(65) @ 250740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=1
+UVM_INFO uart_driver.sv(65) @ 259380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=0
+UVM_INFO uart_driver.sv(65) @ 268020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=1
+UVM_INFO uart_driver.sv(65) @ 276660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=1
+UVM_INFO uart_driver.sv(93) @ 285300000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY injection DATA SEND tx =1 parity_bit=1
+UVM_INFO uart_driver.sv(110) @ 293940000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 298500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 307380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 324660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=1
+UVM_INFO uart_monitor.sv(63) @ 333300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 341940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 350580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 359220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=1
+UVM_INFO uart_monitor.sv(63) @ 367860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 376500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=1
+UVM_INFO uart_monitor.sv(63) @ 385140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=1
+UVM_INFO uart_monitor.sv(69) @ 393780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 393780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0xd5 | rx_valid=0 | parity_err=1 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 402420000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 402420000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0xd5
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_objection.svh(1276) @ 423540000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO uart_env.sv(50) @ 423540000: uvm_test_top.env [uart_env] Check Passed : no Mismatched 
+UVM_INFO uart_env.sv(54) @ 423540000: uvm_test_top.env [Report] Total Coverage    : 49
+UVM_INFO uart_env.sv(55) @ 423540000: uvm_test_top.env [Report] Total Reads       : 2
+UVM_INFO uart_env.sv(56) @ 423540000: uvm_test_top.env [Report] Total PASS        : 2
+UVM_INFO uart_env.sv(57) @ 423540000: uvm_test_top.env [Report] Total FAIL        : 0
+UVM_INFO uart_env.sv(62) @ 423540000: uvm_test_top.env [PHASE] Clean up phase.....
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_report_server.svh(904) @ 423540000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   62
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[PHASE]     4
+[RNTST]     1
+[Report]     4
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[UVMTOP]     1
+[uart_driver]    22
+[uart_env]     1
+[uart_monitor]    25
+[uart_scoreboard]     2
+
+$finish called from file "/apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_root.svh", line 527.
+$finish at simulation time            423540000
+"uart_interface.sv", 57: tb.vif.unnamed$$_4, 3529 attempts, 2 match
+"uart_interface.sv", 58: tb.vif.unnamed$$_5, 3529 attempts, 2 match
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 423540000 ps
+CPU Time:      0.530 seconds;       Data structure size:   0.3Mb
+Wed Dec 31 09:31:39 2025
+Finding VCD file...
+./waveform.vcd
+[2025-12-31 14:31:40 UTC] Opening EPWave...
+Done
+
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test uart_repeat10_test...
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_root.svh(589) @ 0: reporter [UVMTOP] UVM testbench topology:
+--------------------------------------------------------------
+Name                       Type                    Size  Value
+--------------------------------------------------------------
+uvm_test_top               uart_repeat10_test      -     @341 
+  env                      uart_env                -     @354 
+    cov                    uart_coverage           -     @397 
+      cov_export           uvm_analysis_imp        -     @406 
+    m_agent                uart_agent              -     @369 
+      drv                  uart_driver             -     @554 
+        rsp_port           uvm_analysis_port       -     @573 
+        seq_item_port      uvm_seq_item_pull_port  -     @563 
+      mon                  uart_monitor            -     @583 
+        mon_ap             uvm_analysis_port       -     @592 
+      seqr                 uart_sequencer          -     @417 
+        rsp_export         uvm_analysis_export     -     @426 
+        seq_item_export    uvm_seq_item_pull_imp   -     @544 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    soc                    uart_scoreboard         -     @378 
+      soc_export           uvm_analysis_imp        -     @387 
+--------------------------------------------------------------
+
+UVM_INFO uart_driver.sv(36) @ 0: uvm_test_top.env.m_agent.drv [uart_driver] Start of Simulation...
+UVM_INFO uart_driver.sv(41) @ 0: uvm_test_top.env.m_agent.drv [PHASE] Preparing reset...
+UVM_INFO uart_driver.sv(50) @ 200000: uvm_test_top.env.m_agent.drv [PHASE] Reset applied...
+UVM_INFO uart_driver.sv(81) @ 200000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =x
+UVM_INFO uart_driver.sv(55) @ 200000: uvm_test_top.env.m_agent.drv [PHASE] Reset Completed...
+UVM_INFO uart_driver.sv(65) @ 3420000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=1
+UVM_INFO uart_driver.sv(65) @ 6660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=0
+UVM_INFO uart_driver.sv(65) @ 9900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=1
+UVM_INFO uart_driver.sv(65) @ 13140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=1
+UVM_INFO uart_driver.sv(65) @ 16380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=0
+UVM_INFO uart_driver.sv(65) @ 19620000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=1
+UVM_INFO uart_driver.sv(65) @ 22860000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=0
+UVM_INFO uart_driver.sv(65) @ 26100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=1
+UVM_INFO uart_driver.sv(110) @ 29340000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(46) @ 31140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected frame error...
+UVM_INFO uart_monitor.sv(72) @ 31140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=0 | frame_err=1
+UVM_INFO uart_monitor.sv(82) @ 34380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 34380000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 77940000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 283980000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=1
+UVM_INFO uart_driver.sv(65) @ 490020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=0
+UVM_INFO uart_driver.sv(65) @ 696060000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=1
+UVM_INFO uart_driver.sv(65) @ 902100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=0
+UVM_INFO uart_driver.sv(65) @ 1108140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=1
+UVM_INFO uart_driver.sv(65) @ 1314180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=0
+UVM_INFO uart_driver.sv(65) @ 1520220000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=1
+UVM_INFO uart_driver.sv(65) @ 1726260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=1
+UVM_INFO uart_driver.sv(93) @ 1932300000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY injection DATA SEND tx =1 parity_bit=1
+UVM_INFO uart_driver.sv(110) @ 2138340000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(46) @ 2241540000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected frame error...
+UVM_INFO uart_monitor.sv(72) @ 2241540000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=1 | frame_err=1
+UVM_INFO uart_monitor.sv(82) @ 2447580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 2447580000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 5228940000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 5753460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =80 tx=0
+UVM_INFO uart_driver.sv(65) @ 6277980000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =80 tx=0
+UVM_INFO uart_driver.sv(65) @ 6802500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =80 tx=0
+UVM_INFO uart_driver.sv(65) @ 7327020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =80 tx=0
+UVM_INFO uart_driver.sv(65) @ 7851540000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =80 tx=0
+UVM_INFO uart_driver.sv(65) @ 8376060000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =80 tx=0
+UVM_INFO uart_driver.sv(65) @ 8900580000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =80 tx=0
+UVM_INFO uart_driver.sv(65) @ 9425100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =80 tx=1
+UVM_INFO uart_driver.sv(110) @ 9949620000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(54) @ 10212060000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 10736820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 11785860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 12310380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 12834900000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 13359420000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 13883940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 14408460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 14932980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 15457500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=1
+UVM_INFO uart_monitor.sv(72) @ 15457500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x80 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 15982020000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 15982020000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x80
+UVM_INFO uart_driver.sv(81) @ 17817420000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 18318180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =a5 tx=1
+UVM_INFO uart_driver.sv(65) @ 18818940000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =a5 tx=0
+UVM_INFO uart_driver.sv(65) @ 19319700000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =a5 tx=1
+UVM_INFO uart_driver.sv(65) @ 19820460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =a5 tx=0
+UVM_INFO uart_driver.sv(65) @ 20321220000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =a5 tx=0
+UVM_INFO uart_driver.sv(65) @ 20821980000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =a5 tx=1
+UVM_INFO uart_driver.sv(65) @ 21322740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =a5 tx=0
+UVM_INFO uart_driver.sv(65) @ 21823500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =a5 tx=1
+UVM_INFO uart_driver.sv(97) @ 22324260000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY DATA SEND tx =1
+UVM_INFO uart_driver.sv(110) @ 22825020000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(46) @ 23075580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected frame error...
+UVM_INFO uart_monitor.sv(72) @ 23075580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=0 | frame_err=1
+UVM_INFO uart_monitor.sv(82) @ 23576340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 23576340000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 30336420000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 31190220000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =6 tx=0
+UVM_INFO uart_driver.sv(65) @ 32044020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =6 tx=1
+UVM_INFO uart_driver.sv(65) @ 32897820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =6 tx=1
+UVM_INFO uart_driver.sv(65) @ 33751620000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =6 tx=0
+UVM_INFO uart_driver.sv(65) @ 34605420000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =6 tx=0
+UVM_INFO uart_driver.sv(65) @ 35459220000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =6 tx=0
+UVM_INFO uart_driver.sv(65) @ 36313020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =6 tx=0
+UVM_INFO uart_driver.sv(65) @ 37166820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =6 tx=0
+UVM_INFO uart_driver.sv(97) @ 38020620000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY DATA SEND tx =0
+UVM_INFO uart_driver.sv(110) @ 38874420000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(46) @ 39301500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected frame error...
+UVM_INFO uart_monitor.sv(72) @ 39301500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=0 | frame_err=1
+UVM_INFO uart_monitor.sv(82) @ 40155300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 40155300000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 51681420000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 51903180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d1 tx=1
+UVM_INFO uart_driver.sv(65) @ 52124940000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d1 tx=0
+UVM_INFO uart_driver.sv(65) @ 52346700000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d1 tx=0
+UVM_INFO uart_driver.sv(65) @ 52568460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d1 tx=0
+UVM_INFO uart_driver.sv(65) @ 52790220000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d1 tx=1
+UVM_INFO uart_driver.sv(65) @ 53011980000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d1 tx=0
+UVM_INFO uart_driver.sv(65) @ 53233740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d1 tx=1
+UVM_INFO uart_driver.sv(65) @ 53455500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d1 tx=1
+UVM_INFO uart_driver.sv(97) @ 53677260000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY DATA SEND tx =1
+UVM_INFO uart_driver.sv(110) @ 53899020000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(46) @ 54010140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected frame error...
+UVM_INFO uart_monitor.sv(72) @ 54010140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=0 | frame_err=1
+UVM_INFO uart_monitor.sv(82) @ 54231900000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 54231900000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 57225420000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 57369180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =81 tx=1
+UVM_INFO uart_driver.sv(65) @ 57512940000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =81 tx=0
+UVM_INFO uart_driver.sv(65) @ 57656700000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =81 tx=0
+UVM_INFO uart_driver.sv(65) @ 57800460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =81 tx=0
+UVM_INFO uart_driver.sv(65) @ 57944220000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =81 tx=0
+UVM_INFO uart_driver.sv(65) @ 58087980000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =81 tx=0
+UVM_INFO uart_driver.sv(65) @ 58231740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =81 tx=0
+UVM_INFO uart_driver.sv(65) @ 58375500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =81 tx=1
+UVM_INFO uart_driver.sv(97) @ 58519260000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY DATA SEND tx =1
+UVM_INFO uart_driver.sv(110) @ 58663020000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(46) @ 58735140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected frame error...
+UVM_INFO uart_monitor.sv(72) @ 58735140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=0 | frame_err=1
+UVM_INFO uart_monitor.sv(82) @ 58878900000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 58878900000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 60819420000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 61656660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =71 tx=1
+UVM_INFO uart_driver.sv(65) @ 62493900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =71 tx=0
+UVM_INFO uart_driver.sv(65) @ 63331140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =71 tx=0
+UVM_INFO uart_driver.sv(65) @ 64168380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =71 tx=0
+UVM_INFO uart_driver.sv(65) @ 65005620000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =71 tx=1
+UVM_INFO uart_driver.sv(65) @ 65842860000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =71 tx=1
+UVM_INFO uart_driver.sv(65) @ 66680100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =71 tx=1
+UVM_INFO uart_driver.sv(65) @ 67517340000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =71 tx=0
+UVM_INFO uart_driver.sv(97) @ 68354580000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY DATA SEND tx =0
+UVM_INFO uart_driver.sv(110) @ 69191820000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 69610620000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 70448100000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 72122580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=1
+UVM_INFO uart_monitor.sv(63) @ 72959820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 73797060000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 74634300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 75471540000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=1
+UVM_INFO uart_monitor.sv(63) @ 76308780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=1
+UVM_INFO uart_monitor.sv(63) @ 77146020000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=1
+UVM_INFO uart_monitor.sv(63) @ 77983260000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(69) @ 78820500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 78820500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x71 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 79657740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 79657740000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x71
+UVM_INFO uart_driver.sv(81) @ 81750420000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 82345500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =de tx=0
+UVM_INFO uart_driver.sv(65) @ 82940580000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =de tx=1
+UVM_INFO uart_driver.sv(65) @ 83535660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =de tx=1
+UVM_INFO uart_driver.sv(65) @ 84130740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =de tx=1
+UVM_INFO uart_driver.sv(65) @ 84725820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =de tx=1
+UVM_INFO uart_driver.sv(65) @ 85320900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =de tx=0
+UVM_INFO uart_driver.sv(65) @ 85915980000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =de tx=1
+UVM_INFO uart_driver.sv(65) @ 86511060000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =de tx=1
+UVM_INFO uart_driver.sv(93) @ 87106140000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY injection DATA SEND tx =1 parity_bit=0
+UVM_INFO uart_driver.sv(110) @ 87701220000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(54) @ 87998940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 88594260000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 89784420000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 90379500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=1
+UVM_INFO uart_monitor.sv(63) @ 90974580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 91569660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=1
+UVM_INFO uart_monitor.sv(63) @ 92164740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=1
+UVM_INFO uart_monitor.sv(63) @ 92759820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 93354900000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=1
+UVM_INFO uart_monitor.sv(63) @ 93949980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=1
+UVM_INFO uart_monitor.sv(69) @ 94545060000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 94545060000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0xde | rx_valid=0 | parity_err=1 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 95140140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 95140140000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0xde
+UVM_INFO uart_driver.sv(81) @ 96627420000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 97035060000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =9d tx=1
+UVM_INFO uart_driver.sv(65) @ 97442700000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =9d tx=0
+UVM_INFO uart_driver.sv(65) @ 97850340000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =9d tx=1
+UVM_INFO uart_driver.sv(65) @ 98257980000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =9d tx=1
+UVM_INFO uart_driver.sv(65) @ 98665620000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =9d tx=1
+UVM_INFO uart_driver.sv(65) @ 99073260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =9d tx=0
+UVM_INFO uart_driver.sv(65) @ 99480900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =9d tx=0
+UVM_INFO uart_driver.sv(65) @ 99888540000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =9d tx=1
+UVM_INFO uart_driver.sv(110) @ 100296180000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(54) @ 100500180000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 100908060000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 101723340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=1
+UVM_INFO uart_monitor.sv(63) @ 102130980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 102538620000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 102946260000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=1
+UVM_INFO uart_monitor.sv(63) @ 103353900000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=1
+UVM_INFO uart_monitor.sv(63) @ 103761540000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 104169180000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 104576820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=1
+UVM_INFO uart_monitor.sv(72) @ 104576820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x9d | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 104984460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 104984460000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x9d
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_objection.svh(1276) @ 106410780000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO uart_env.sv(50) @ 106410780000: uvm_test_top.env [uart_env] Check Passed : no Mismatched 
+UVM_INFO uart_env.sv(54) @ 106410780000: uvm_test_top.env [Report] Total Coverage    : 85
+UVM_INFO uart_env.sv(55) @ 106410780000: uvm_test_top.env [Report] Total Reads       : 10
+UVM_INFO uart_env.sv(56) @ 106410780000: uvm_test_top.env [Report] Total PASS        : 10
+UVM_INFO uart_env.sv(57) @ 106410780000: uvm_test_top.env [Report] Total FAIL        : 0
+UVM_INFO uart_env.sv(62) @ 106410780000: uvm_test_top.env [PHASE] Clean up phase.....
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_report_server.svh(904) @ 106410780000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  199
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[PHASE]     4
+[RNTST]     1
+[Report]     4
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[UVMTOP]     1
+[uart_driver]   108
+[uart_env]     1
+[uart_monitor]    68
+[uart_scoreboard]    10
+
+$finish called from file "/apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_root.svh", line 527.
+$finish at simulation time         106410780000
+"uart_interface.sv", 57: tb.vif.unnamed$$_4, 886756 attempts, 4 match
+"uart_interface.sv", 58: tb.vif.unnamed$$_5, 886756 attempts, 4 match
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 106410780000 ps
+CPU Time:      2.740 seconds;       Data structure size:   0.3Mb
+Wed Dec 31 09:44:07 2025
+Finding VCD file...
+./waveform.vcd
+[2025-12-31 14:44:07 UTC] Opening EPWave...
+Done
+UVM_INFO @ 0: reporter [RNTST] Running test uart_baud_rate_test...
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_root.svh(589) @ 0: reporter [UVMTOP] UVM testbench topology:
+--------------------------------------------------------------
+Name                       Type                    Size  Value
+--------------------------------------------------------------
+uvm_test_top               uart_baud_rate_test     -     @341 
+  env                      uart_env                -     @354 
+    cov                    uart_coverage           -     @397 
+      cov_export           uvm_analysis_imp        -     @406 
+    m_agent                uart_agent              -     @369 
+      drv                  uart_driver             -     @554 
+        rsp_port           uvm_analysis_port       -     @573 
+        seq_item_port      uvm_seq_item_pull_port  -     @563 
+      mon                  uart_monitor            -     @583 
+        mon_ap             uvm_analysis_port       -     @592 
+      seqr                 uart_sequencer          -     @417 
+        rsp_export         uvm_analysis_export     -     @426 
+        seq_item_export    uvm_seq_item_pull_imp   -     @544 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    soc                    uart_scoreboard         -     @378 
+      soc_export           uvm_analysis_imp        -     @387 
+--------------------------------------------------------------
+
+UVM_INFO uart_driver.sv(36) @ 0: uvm_test_top.env.m_agent.drv [uart_driver] Start of Simulation...
+UVM_INFO uart_driver.sv(41) @ 0: uvm_test_top.env.m_agent.drv [PHASE] Preparing reset...
+UVM_INFO uart_driver.sv(50) @ 200000: uvm_test_top.env.m_agent.drv [PHASE] Reset applied...
+UVM_INFO uart_driver.sv(81) @ 200000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =x
+UVM_INFO uart_driver.sv(55) @ 200000: uvm_test_top.env.m_agent.drv [PHASE] Reset Completed...
+UVM_INFO uart_driver.sv(65) @ 104340000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 208500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 312660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 416820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 520980000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 625140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 729300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 833460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(110) @ 937620000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 989940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 1094340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 1302660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 1406820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 1510980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 1615140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 1719300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 1823460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 1927620000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 2031780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(72) @ 2031780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 2135940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 2135940000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 2500020000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 2604180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 2708340000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 2812500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 2916660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 3020820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 3124980000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 3229140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 3333300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(93) @ 3437460000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY injection DATA SEND tx =1 parity_bit=0
+UVM_INFO uart_driver.sv(110) @ 3541620000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(54) @ 3593940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 3698340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 3906660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=1
+UVM_INFO uart_monitor.sv(63) @ 4010820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=1
+UVM_INFO uart_monitor.sv(63) @ 4114980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 4219140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=1
+UVM_INFO uart_monitor.sv(63) @ 4323300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=1
+UVM_INFO uart_monitor.sv(63) @ 4427460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=1
+UVM_INFO uart_monitor.sv(63) @ 4531620000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=1
+UVM_INFO uart_monitor.sv(63) @ 4635780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=1
+UVM_INFO uart_monitor.sv(69) @ 4739940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 4739940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0xff | rx_valid=0 | parity_err=1 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 4844100000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 4844100000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0xff
+UVM_INFO uart_driver.sv(81) @ 5104020000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 5208180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=1
+UVM_INFO uart_driver.sv(65) @ 5312340000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 5416500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=1
+UVM_INFO uart_driver.sv(65) @ 5520660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 5624820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 5728980000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 5833140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 5937300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(110) @ 6041460000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 6093780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 6198180000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 6406500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=1
+UVM_INFO uart_monitor.sv(63) @ 6510660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 6614820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 6718980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 6823140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 6927300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 7031460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 7135620000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(72) @ 7135620000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x5 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 7239780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 7239780000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x5
+UVM_INFO uart_driver.sv(81) @ 7603860000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 7708020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 7812180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 7916340000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 8020500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 8124660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 8228820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 8332980000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=1
+UVM_INFO uart_driver.sv(65) @ 8437140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(97) @ 8541300000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY DATA SEND tx =0
+UVM_INFO uart_driver.sv(110) @ 8645460000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(54) @ 8697780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 8802180000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 9010500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 9114660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 9218820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 9322980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 9427140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 9531300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 9635460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=1
+UVM_INFO uart_monitor.sv(63) @ 9739620000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(69) @ 9843780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 9843780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x40 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 9947940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 9947940000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x40
+UVM_INFO uart_driver.sv(81) @ 10207860000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 10312020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 10416180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 10520340000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 10624500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 10728660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=1
+UVM_INFO uart_driver.sv(65) @ 10832820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 10936980000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 11041140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=1
+UVM_INFO uart_driver.sv(97) @ 11145300000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY DATA SEND tx =1
+UVM_INFO uart_driver.sv(110) @ 11249460000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 11301780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 11406180000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 11614500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 11718660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 11822820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 11926980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 12031140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=1
+UVM_INFO uart_monitor.sv(63) @ 12135300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 12239460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 12343620000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=1
+UVM_INFO uart_monitor.sv(69) @ 12447780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 12447780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x90 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 12551940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 12551940000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x90
+UVM_INFO uart_driver.sv(81) @ 12811860000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 12910740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 13009620000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 13108500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 13207380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 13306260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 13405140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 13504020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 13602900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(97) @ 13701780000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY DATA SEND tx =0
+UVM_INFO uart_driver.sv(110) @ 13800660000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 13850340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 13949460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 14147220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 14246100000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 14344980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 14443860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 14542740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 14641620000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 14740500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 14839380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(69) @ 14938260000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 14938260000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 15037140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 15037140000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 15283860000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 15382740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 15481620000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 15580500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 15679380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 15778260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 15877140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 15976020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 16074900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(97) @ 16173780000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY DATA SEND tx =1
+UVM_INFO uart_driver.sv(110) @ 16272660000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 16322340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 16421460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 16619220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=1
+UVM_INFO uart_monitor.sv(63) @ 16718100000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=1
+UVM_INFO uart_monitor.sv(63) @ 16816980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 16915860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=1
+UVM_INFO uart_monitor.sv(63) @ 17014740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=1
+UVM_INFO uart_monitor.sv(63) @ 17113620000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=1
+UVM_INFO uart_monitor.sv(63) @ 17212500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=1
+UVM_INFO uart_monitor.sv(63) @ 17311380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=1
+UVM_INFO uart_monitor.sv(69) @ 17410260000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 17410260000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0xff | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 17509140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 17509140000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0xff
+UVM_INFO uart_driver.sv(81) @ 17755860000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 17854740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=1
+UVM_INFO uart_driver.sv(65) @ 17953620000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 18052500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=1
+UVM_INFO uart_driver.sv(65) @ 18151380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 18250260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 18349140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 18448020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 18546900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(97) @ 18645780000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY DATA SEND tx =0
+UVM_INFO uart_driver.sv(110) @ 18744660000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 18794340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 18893460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 19091220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=1
+UVM_INFO uart_monitor.sv(63) @ 19190100000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 19288980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 19387860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 19486740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 19585620000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 19684500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 19783380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(69) @ 19882260000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 19882260000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x5 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 19981140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 19981140000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x5
+UVM_INFO uart_driver.sv(81) @ 20227860000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 20326740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 20425620000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 20524500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 20623380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 20722260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 20821140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 20920020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=1
+UVM_INFO uart_driver.sv(65) @ 21018900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(93) @ 21117780000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY injection DATA SEND tx =0 parity_bit=1
+UVM_INFO uart_driver.sv(110) @ 21216660000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 21266340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 21365460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 21563220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 21662100000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 21760980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 21859860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 21958740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 22057620000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 22156500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=1
+UVM_INFO uart_monitor.sv(63) @ 22255380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(69) @ 22354260000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 22354260000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x40 | rx_valid=0 | parity_err=1 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 22453140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 22453140000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x40
+UVM_INFO uart_driver.sv(81) @ 22699860000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 22798740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 22897620000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 22996500000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 23095380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 23194260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=1
+UVM_INFO uart_driver.sv(65) @ 23293140000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 23392020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 23490900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=1
+UVM_INFO uart_driver.sv(110) @ 23589780000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(54) @ 23639460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 23738580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 23936340000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 24035220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 24134100000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 24232980000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 24331860000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=1
+UVM_INFO uart_monitor.sv(63) @ 24430740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 24529620000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 24628500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=1
+UVM_INFO uart_monitor.sv(72) @ 24628500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x90 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 24727380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 24727380000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x90
+UVM_INFO uart_driver.sv(81) @ 25072980000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 25081620000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 25090260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 25098900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 25107540000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 25116180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 25124820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 25133460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(65) @ 25142100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =0 tx=0
+UVM_INFO uart_driver.sv(110) @ 25150740000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 25155300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 25164180000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 25181460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 25190100000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 25198740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 25207380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 25216020000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 25224660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 25233300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 25241940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(72) @ 25241940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 25250580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 25250580000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 25280340000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 25288980000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 25297620000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 25306260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 25314900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 25323540000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 25332180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 25340820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(65) @ 25349460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ff tx=1
+UVM_INFO uart_driver.sv(97) @ 25358100000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY DATA SEND tx =1
+UVM_INFO uart_driver.sv(110) @ 25366740000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 25371300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 25380180000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 25397460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=1
+UVM_INFO uart_monitor.sv(63) @ 25406100000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=1
+UVM_INFO uart_monitor.sv(63) @ 25414740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 25423380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=1
+UVM_INFO uart_monitor.sv(63) @ 25432020000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=1
+UVM_INFO uart_monitor.sv(63) @ 25440660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=1
+UVM_INFO uart_monitor.sv(63) @ 25449300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=1
+UVM_INFO uart_monitor.sv(63) @ 25457940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=1
+UVM_INFO uart_monitor.sv(69) @ 25466580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 25466580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0xff | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 25475220000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 25475220000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0xff
+UVM_INFO uart_driver.sv(81) @ 25496340000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 25504980000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=1
+UVM_INFO uart_driver.sv(65) @ 25513620000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 25522260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=1
+UVM_INFO uart_driver.sv(65) @ 25530900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 25539540000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 25548180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 25556820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(65) @ 25565460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =5 tx=0
+UVM_INFO uart_driver.sv(110) @ 25574100000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 25578660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 25587540000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 25604820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=1
+UVM_INFO uart_monitor.sv(63) @ 25613460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 25622100000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=1
+UVM_INFO uart_monitor.sv(63) @ 25630740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 25639380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 25648020000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 25656660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 25665300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(72) @ 25665300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x5 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 25673940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 25673940000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x5
+UVM_INFO uart_driver.sv(81) @ 25703700000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 25712340000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 25720980000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 25729620000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 25738260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 25746900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 25755540000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(65) @ 25764180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=1
+UVM_INFO uart_driver.sv(65) @ 25772820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =40 tx=0
+UVM_INFO uart_driver.sv(93) @ 25781460000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY injection DATA SEND tx =0 parity_bit=1
+UVM_INFO uart_driver.sv(110) @ 25790100000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(54) @ 25794660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 25803540000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 25820820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 25829460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 25838100000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 25846740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 25855380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=0
+UVM_INFO uart_monitor.sv(63) @ 25864020000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 25872660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=1
+UVM_INFO uart_monitor.sv(63) @ 25881300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=0
+UVM_INFO uart_monitor.sv(69) @ 25889940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor PARITY bit sampled...
+UVM_INFO uart_monitor.sv(72) @ 25889940000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x40 | rx_valid=0 | parity_err=1 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 25898580000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 25898580000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x40
+UVM_INFO uart_driver.sv(81) @ 25919700000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 25928340000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 25936980000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 25945620000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 25954260000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 25962900000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=1
+UVM_INFO uart_driver.sv(65) @ 25971540000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 25980180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=0
+UVM_INFO uart_driver.sv(65) @ 25988820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =90 tx=1
+UVM_INFO uart_driver.sv(110) @ 25997460000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(54) @ 26002020000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected rx_valid...
+UVM_INFO uart_monitor.sv(58) @ 26010900000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor START bit sampled...
+UVM_INFO uart_monitor.sv(63) @ 26028180000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 0: rx=0
+UVM_INFO uart_monitor.sv(63) @ 26036820000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 1: rx=0
+UVM_INFO uart_monitor.sv(63) @ 26045460000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 2: rx=0
+UVM_INFO uart_monitor.sv(63) @ 26054100000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 3: rx=0
+UVM_INFO uart_monitor.sv(63) @ 26062740000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 4: rx=1
+UVM_INFO uart_monitor.sv(63) @ 26071380000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 5: rx=0
+UVM_INFO uart_monitor.sv(63) @ 26080020000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 6: rx=0
+UVM_INFO uart_monitor.sv(63) @ 26088660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor capturing data bit 7: rx=1
+UVM_INFO uart_monitor.sv(72) @ 26088660000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x90 | rx_valid=0 | parity_err=0 | frame_err=0
+UVM_INFO uart_monitor.sv(82) @ 26097300000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 26097300000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x90
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_objection.svh(1276) @ 26127060000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO uart_env.sv(50) @ 26127060000: uvm_test_top.env [uart_env] Check Passed : no Mismatched 
+UVM_INFO uart_env.sv(54) @ 26127060000: uvm_test_top.env [Report] Total Coverage    : 87
+UVM_INFO uart_env.sv(55) @ 26127060000: uvm_test_top.env [Report] Total Reads       : 15
+UVM_INFO uart_env.sv(56) @ 26127060000: uvm_test_top.env [Report] Total PASS        : 15
+UVM_INFO uart_env.sv(57) @ 26127060000: uvm_test_top.env [Report] Total FAIL        : 0
+UVM_INFO uart_env.sv(62) @ 26127060000: uvm_test_top.env [PHASE] Clean up phase.....
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_report_server.svh(904) @ 26127060000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  377
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[PHASE]     4
+[RNTST]     1
+[Report]     4
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[UVMTOP]     1
+[uart_driver]   160
+[uart_env]     1
+[uart_monitor]   189
+[uart_scoreboard]    15
+
+$finish called from file "/apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_root.svh", line 527.
+$finish at simulation time          26127060000
+"uart_interface.sv", 57: tb.vif.unnamed$$_4, 217725 attempts, 15 match
+"uart_interface.sv", 58: tb.vif.unnamed$$_5, 217725 attempts, 15 match
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 26127060000 ps
+CPU Time:      1.200 seconds;       Data structure size:   0.3Mb
+Wed Dec 31 09:46:25 2025
+Finding VCD file...
+./waveform.vcd
+[2025-12-31 14:46:25 UTC] Opening EPWave...
+Done
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test uart_parity_error_test...
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_root.svh(589) @ 0: reporter [UVMTOP] UVM testbench topology:
+--------------------------------------------------------------
+Name                       Type                    Size  Value
+--------------------------------------------------------------
+uvm_test_top               uart_parity_error_test  -     @341 
+  env                      uart_env                -     @354 
+    cov                    uart_coverage           -     @397 
+      cov_export           uvm_analysis_imp        -     @406 
+    m_agent                uart_agent              -     @369 
+      drv                  uart_driver             -     @554 
+        rsp_port           uvm_analysis_port       -     @573 
+        seq_item_port      uvm_seq_item_pull_port  -     @563 
+      mon                  uart_monitor            -     @583 
+        mon_ap             uvm_analysis_port       -     @592 
+      seqr                 uart_sequencer          -     @417 
+        rsp_export         uvm_analysis_export     -     @426 
+        seq_item_export    uvm_seq_item_pull_imp   -     @544 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    soc                    uart_scoreboard         -     @378 
+      soc_export           uvm_analysis_imp        -     @387 
+--------------------------------------------------------------
+
+UVM_INFO uart_driver.sv(36) @ 0: uvm_test_top.env.m_agent.drv [uart_driver] Start of Simulation...
+UVM_INFO uart_driver.sv(41) @ 0: uvm_test_top.env.m_agent.drv [PHASE] Preparing reset...
+UVM_INFO uart_driver.sv(50) @ 200000: uvm_test_top.env.m_agent.drv [PHASE] Reset applied...
+UVM_INFO uart_driver.sv(81) @ 200000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =x
+UVM_INFO uart_driver.sv(55) @ 200000: uvm_test_top.env.m_agent.drv [PHASE] Reset Completed...
+UVM_INFO uart_driver.sv(65) @ 8820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=1
+UVM_INFO uart_driver.sv(65) @ 17460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=0
+UVM_INFO uart_driver.sv(65) @ 26100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=1
+UVM_INFO uart_driver.sv(65) @ 34740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=1
+UVM_INFO uart_driver.sv(65) @ 43380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=0
+UVM_INFO uart_driver.sv(65) @ 52020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=1
+UVM_INFO uart_driver.sv(65) @ 60660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=0
+UVM_INFO uart_driver.sv(65) @ 69300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=1
+UVM_INFO uart_driver.sv(93) @ 77940000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY injection DATA SEND tx =1 parity_bit=1
+UVM_INFO uart_driver.sv(110) @ 86580000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(46) @ 91140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected frame error...
+UVM_INFO uart_monitor.sv(72) @ 91140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=1 | frame_err=1
+UVM_INFO uart_monitor.sv(82) @ 99780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 99780000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 216180000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 224820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=1
+UVM_INFO uart_driver.sv(65) @ 233460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=0
+UVM_INFO uart_driver.sv(65) @ 242100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=1
+UVM_INFO uart_driver.sv(65) @ 250740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=0
+UVM_INFO uart_driver.sv(65) @ 259380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=1
+UVM_INFO uart_driver.sv(65) @ 268020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=0
+UVM_INFO uart_driver.sv(65) @ 276660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=1
+UVM_INFO uart_driver.sv(65) @ 285300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=1
+UVM_INFO uart_driver.sv(93) @ 293940000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY injection DATA SEND tx =1 parity_bit=1
+UVM_INFO uart_driver.sv(110) @ 302580000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(46) @ 307140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected frame error...
+UVM_INFO uart_monitor.sv(72) @ 307140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=1 | frame_err=1
+UVM_INFO uart_monitor.sv(82) @ 315780000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 315780000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_objection.svh(1276) @ 432180000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO uart_env.sv(50) @ 432180000: uvm_test_top.env [uart_env] Check Passed : no Mismatched 
+UVM_INFO uart_env.sv(54) @ 432180000: uvm_test_top.env [Report] Total Coverage    : 32
+UVM_INFO uart_env.sv(55) @ 432180000: uvm_test_top.env [Report] Total Reads       : 2
+UVM_INFO uart_env.sv(56) @ 432180000: uvm_test_top.env [Report] Total PASS        : 2
+UVM_INFO uart_env.sv(57) @ 432180000: uvm_test_top.env [Report] Total FAIL        : 0
+UVM_INFO uart_env.sv(62) @ 432180000: uvm_test_top.env [PHASE] Clean up phase.....
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_report_server.svh(904) @ 432180000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   44
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[PHASE]     4
+[RNTST]     1
+[Report]     4
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[UVMTOP]     1
+[uart_driver]    23
+[uart_env]     1
+[uart_monitor]     6
+[uart_scoreboard]     2
+
+$finish called from file "/apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_root.svh", line 527.
+$finish at simulation time            432180000
+"uart_interface.sv", 57: tb.vif.unnamed$$_4, 3601 attempts, 0 match
+"uart_interface.sv", 58: tb.vif.unnamed$$_5, 3601 attempts, 0 match
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 432180000 ps
+CPU Time:      0.560 seconds;       Data structure size:   0.3Mb
+Wed Dec 31 09:49:34 2025
+Finding VCD file...
+./waveform.vcd
+[2025-12-31 14:49:34 UTC] Opening EPWave...
+Done
+UVM_INFO @ 0: reporter [RNTST] Running test uart_frame_error_test...
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_root.svh(589) @ 0: reporter [UVMTOP] UVM testbench topology:
+--------------------------------------------------------------
+Name                       Type                    Size  Value
+--------------------------------------------------------------
+uvm_test_top               uart_frame_error_test   -     @341 
+  env                      uart_env                -     @354 
+    cov                    uart_coverage           -     @397 
+      cov_export           uvm_analysis_imp        -     @406 
+    m_agent                uart_agent              -     @369 
+      drv                  uart_driver             -     @554 
+        rsp_port           uvm_analysis_port       -     @573 
+        seq_item_port      uvm_seq_item_pull_port  -     @563 
+      mon                  uart_monitor            -     @583 
+        mon_ap             uvm_analysis_port       -     @592 
+      seqr                 uart_sequencer          -     @417 
+        rsp_export         uvm_analysis_export     -     @426 
+        seq_item_export    uvm_seq_item_pull_imp   -     @544 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    soc                    uart_scoreboard         -     @378 
+      soc_export           uvm_analysis_imp        -     @387 
+--------------------------------------------------------------
+
+UVM_INFO uart_driver.sv(36) @ 0: uvm_test_top.env.m_agent.drv [uart_driver] Start of Simulation...
+UVM_INFO uart_driver.sv(41) @ 0: uvm_test_top.env.m_agent.drv [PHASE] Preparing reset...
+UVM_INFO uart_driver.sv(50) @ 200000: uvm_test_top.env.m_agent.drv [PHASE] Reset applied...
+UVM_INFO uart_driver.sv(81) @ 200000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =x
+UVM_INFO uart_driver.sv(55) @ 200000: uvm_test_top.env.m_agent.drv [PHASE] Reset Completed...
+UVM_INFO uart_driver.sv(65) @ 8820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=1
+UVM_INFO uart_driver.sv(65) @ 17460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=0
+UVM_INFO uart_driver.sv(65) @ 26100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=1
+UVM_INFO uart_driver.sv(65) @ 34740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=1
+UVM_INFO uart_driver.sv(65) @ 43380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=0
+UVM_INFO uart_driver.sv(65) @ 52020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=1
+UVM_INFO uart_driver.sv(65) @ 60660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=0
+UVM_INFO uart_driver.sv(65) @ 69300000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =ad tx=1
+UVM_INFO uart_driver.sv(110) @ 77940000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =1
+UVM_INFO uart_monitor.sv(46) @ 82500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected frame error...
+UVM_INFO uart_monitor.sv(72) @ 82500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=0 | frame_err=1
+UVM_INFO uart_monitor.sv(82) @ 91140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 91140000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO uart_driver.sv(81) @ 207540000: uvm_test_top.env.m_agent.drv [uart_driver] START DATA SEND tx =1
+UVM_INFO uart_driver.sv(65) @ 216180000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=1
+UVM_INFO uart_driver.sv(65) @ 224820000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=0
+UVM_INFO uart_driver.sv(65) @ 233460000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=1
+UVM_INFO uart_driver.sv(65) @ 242100000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=0
+UVM_INFO uart_driver.sv(65) @ 250740000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=1
+UVM_INFO uart_driver.sv(65) @ 259380000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=0
+UVM_INFO uart_driver.sv(65) @ 268020000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=1
+UVM_INFO uart_driver.sv(65) @ 276660000: uvm_test_top.env.m_agent.drv [uart_driver] DATA SENDING data =d5 tx=1
+UVM_INFO uart_driver.sv(93) @ 285300000: uvm_test_top.env.m_agent.drv [uart_driver] PARITY injection DATA SEND tx =1 parity_bit=1
+UVM_INFO uart_driver.sv(110) @ 293940000: uvm_test_top.env.m_agent.drv [uart_driver] STOP DATA SEND tx =0
+UVM_INFO uart_monitor.sv(46) @ 298500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor detected frame error...
+UVM_INFO uart_monitor.sv(72) @ 298500000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor captured RX_data=0x0 | rx_valid=0 | parity_err=1 | frame_err=1
+UVM_INFO uart_monitor.sv(82) @ 307140000: uvm_test_top.env.m_agent.mon [uart_monitor] Monitor transaction completed.
+UVM_INFO uart_scoreboard.sv(34) @ 307140000: uvm_test_top.env.soc [uart_scoreboard] Matched rx_data=0x0
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_objection.svh(1276) @ 423540000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO uart_env.sv(50) @ 423540000: uvm_test_top.env [uart_env] Check Passed : no Mismatched 
+UVM_INFO uart_env.sv(54) @ 423540000: uvm_test_top.env [Report] Total Coverage    : 49
+UVM_INFO uart_env.sv(55) @ 423540000: uvm_test_top.env [Report] Total Reads       : 2
+UVM_INFO uart_env.sv(56) @ 423540000: uvm_test_top.env [Report] Total PASS        : 2
+UVM_INFO uart_env.sv(57) @ 423540000: uvm_test_top.env [Report] Total FAIL        : 0
+UVM_INFO uart_env.sv(62) @ 423540000: uvm_test_top.env [PHASE] Clean up phase.....
+UVM_INFO /apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_report_server.svh(904) @ 423540000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   43
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[PHASE]     4
+[RNTST]     1
+[Report]     4
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[UVMTOP]     1
+[uart_driver]    22
+[uart_env]     1
+[uart_monitor]     6
+[uart_scoreboard]     2
+
+$finish called from file "/apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/base/uvm_root.svh", line 527.
+$finish at simulation time            423540000
+"uart_interface.sv", 57: tb.vif.unnamed$$_4, 3529 attempts, 0 match
+"uart_interface.sv", 58: tb.vif.unnamed$$_5, 3529 attempts, 0 match
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 423540000 ps
+CPU Time:      0.530 seconds;       Data structure size:   0.3Mb
+Wed Dec 31 09:51:25 2025
+Finding VCD file...
+./waveform.vcd
+[2025-12-31 14:51:25 UTC] Opening EPWave...
+Done 
