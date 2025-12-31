@@ -15,14 +15,18 @@ class uart_parity_error_seq extends uart_sequence;
     super.new(name);
   endfunction
   task body();
+    repeat(2)begin
       tr = uart_transaction::type_id::create("tr");
-      tr.randomize() with {tr.clk_per_bit == 13'd72; parity_error_injection == 1'b1;};
+      if (!tr.randomize() with {
+            clk_per_bit == 13'd72;
+            parity_en == 1'b1;
+            parity_error_injection == 1'b1;
+          }) begin
+        `uvm_error(get_type_name(), "Randomization failed for parity error transaction")
+      end
       start_item(tr);
       finish_item(tr);
-      tr = uart_transaction::type_id::create("tr");
-      tr.randomize() with {tr.clk_per_bit == 13'd72; parity_error_injection == 1'b1;};
-      start_item(tr);
-      finish_item(tr);
+    end
   endtask
 endclass
   class uart_parity_error_test extends uart_base_test;
